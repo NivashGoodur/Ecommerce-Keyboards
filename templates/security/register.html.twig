@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}La Boutique - Inscription{% endblock %}
+
+{% block content %}
+	<div class="container">
+		<h1 class="mt-4">Inscription</h1>
+
+		{% if notification %}
+			<div class="alert alert-info">{{ notification }}</div>
+            <hr>
+		{% endif %}
+		{{form(form)}}
+	</div>
+{% endblock %}

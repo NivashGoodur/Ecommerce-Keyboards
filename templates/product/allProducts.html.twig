@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}La Boutique - Nos Produits{% endblock %}
+
+{% block content %}
+	<div class="container">
+		<div class="row">
+			<div class="col-3">
+				<h1 class="mt-4">Filtrer</h1>
+                {{  form(form) }}
+			</div>
+			<div class="col-9">
+				<h1 class="mt-4">Nos produits</h1>
+				<div class="row">
+					{% for product in products %}
+						<div class="col-4">
+							{% include "product/single_product.html.twig" %}
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
